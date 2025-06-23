@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = () => {
+const TopHeader = () => {
   return (
     <header className=" bg-black font-thin text-white text-center p-2">
         <span>Use promo code </span>
@@ -12,4 +12,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default TopHeader;
