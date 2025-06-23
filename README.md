@@ -1,13 +1,13 @@
-# 🛍️ Shop Clothes
+# 🛍️ TrendWear
 
-**Shop Clothes** is a modern and stylish online clothing store that allows users to **browse, filter**, and **purchase** a wide selection of fashion items — including **t-shirts, jeans, dresses, jackets**, and more.  
+**TrendWear** is a modern and stylish online clothing store that allows users to **browse, filter**, and **purchase** a wide selection of fashion items — including **t-shirts, jeans, dresses, jackets**, and more.  
 It offers a **seamless and intuitive shopping experience** through a **clean, responsive, and user-friendly UI** built with React and Tailwind CSS.
 
 ---
 
 ## 🔗 Live Demo
 
-👉 [**Click here to view Shop Clothes live**](https://shop-co-front.vercel.app/)
+👉 [**Click here to view TrendWear live**](https://shop-co-front.vercel.app/)
 
 > 🛒 Experience the full shopping flow — from browsing to checkout.
 
