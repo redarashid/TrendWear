@@ -42,7 +42,7 @@ It offers a **seamless and intuitive shopping experience** through a **clean, re
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/redarashid/shop-clothes.git
+git clone https://github.com/redarashid/TrendWear.git
 cd shop-clothes
 npm install
 npm start
