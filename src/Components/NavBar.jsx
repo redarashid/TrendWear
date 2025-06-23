@@ -1,46 +1,46 @@
-"use client"
+"use client";
 
-import { useContext, useRef, useState } from "react"
-import { motion, useScroll, useMotionValueEvent } from "framer-motion"
-import { Link, useNavigate } from "react-router-dom"
-import { SideNavCtx } from "../store/SideNavContext"
-import { CartCtx } from "../store/CartContext"
-import { AuthContext } from "../AuthContext"
+import { useContext, useRef, useState } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
+import { SideNavCtx } from "../store/SideNavContext";
+import { CartCtx } from "../store/CartContext";
+import { AuthContext } from "../AuthContext";
 
 export default function Navbar() {
-  const [hidden, setHidden] = useState(false)
-  const { sideNavHidden, setSideNavHidden } = useContext(SideNavCtx)
-  const { Cart } = useContext(CartCtx)
-  const { isLoggedIn, userEmail, logout } = useContext(AuthContext)
-  const cartRef = useRef()
-  const navigate = useNavigate()
-  const { scrollY } = useScroll()
-  const search = useRef()
+  const [hidden, setHidden] = useState(false);
+  const { sideNavHidden, setSideNavHidden } = useContext(SideNavCtx);
+  const { Cart } = useContext(CartCtx);
+  const { isLoggedIn, userEmail, logout } = useContext(AuthContext);
+  const cartRef = useRef();
+  const navigate = useNavigate();
+  const { scrollY } = useScroll();
+  const search = useRef();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const prev = scrollY.getPrevious()
+    const prev = scrollY.getPrevious();
     if (latest > prev && latest > 250) {
-      setHidden(true)
+      setHidden(true);
     } else {
-      setHidden(false)
+      setHidden(false);
     }
-  })
+  });
 
   const handleFormSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (search.current?.value) {
-      navigate(`/Shop/${search.current.value}`)
+      navigate(`/Shop/${search.current.value}`);
     }
-  }
+  };
 
   const toggleSideNav = () => {
-    setSideNavHidden(!sideNavHidden)
-  }
+    setSideNavHidden(!sideNavHidden);
+  };
 
   const handleLogout = () => {
-    logout()
-    navigate("/Login")
-  }
+    logout();
+    navigate("/Login");
+  };
 
   return (
     <motion.div
@@ -50,40 +50,63 @@ export default function Navbar() {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.3 }}
-      className="sticky top-0 bg-white shadow-md z-50 pb-4"
-    >
+      className="sticky top-0 bg-white shadow-md z-50 pb-4">
       <motion.nav className="bg-white w-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col lg:flex-row items-center lg:gap-12 gap-5 justify-between">
         <div className="hidden lg:block mt-3">
           <ul className="flex gap-5">
-            <motion.li initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
-              <Link className="text-gray-700 hover:text-black transition-colors" to="/Shop">
+            <motion.li
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}>
+              <Link
+                className="text-gray-700 hover:text-black transition-colors"
+                to="/Shop">
                 Shop
               </Link>
             </motion.li>
-            <motion.li initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
-              <Link className="text-gray-700 hover:text-black transition-colors" to="/NewArrival">
+            <motion.li
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}>
+              <Link
+                className="text-gray-700 hover:text-black transition-colors"
+                to="/NewArrival">
                 New Arrivals
               </Link>
             </motion.li>
-            <motion.li initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
-              <Link className="text-gray-700 hover:text-black transition-colors" to="/TopSelling">
+            <motion.li
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}>
+              <Link
+                className="text-gray-700 hover:text-black transition-colors"
+                to="/TopSelling">
                 Top Selling
               </Link>
             </motion.li>
-            <motion.li initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
-              <Link className="text-gray-700 hover:text-black transition-colors" to="/OnSale">
+            <motion.li
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}>
+              <Link
+                className="text-gray-700 hover:text-black transition-colors"
+                to="/OnSale">
                 On Sale
               </Link>
             </motion.li>
             {!isLoggedIn && (
               <>
-                <motion.li initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
-                  <Link className="text-gray-700 hover:text-black transition-colors" to="/Login">
+                <motion.li
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}>
+                  <Link
+                    className="text-gray-700 hover:text-black transition-colors"
+                    to="/Login">
                     Login
                   </Link>
                 </motion.li>
-                <motion.li initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
-                  <Link className="text-gray-700 hover:text-black transition-colors" to="/Signup">
+                <motion.li
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}>
+                  <Link
+                    className="text-gray-700 hover:text-black transition-colors"
+                    to="/Signup">
                     Sign Up
                   </Link>
                 </motion.li>
@@ -97,8 +120,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             className="bg-gray-100 p-1 px-3 rounded-full flex mt-3 gap-2 w-full max-w-sm lg:max-w-md"
-            onSubmit={handleFormSubmit}
-          >
+            onSubmit={handleFormSubmit}>
             <button type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,8 +128,7 @@ export default function Navbar() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6"
-              >
+                className="w-6 h-6">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -127,10 +148,11 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col lg:flex-row gap-3 sm:mt-3 items-center w-full"
-        >
+          className="flex flex-col lg:flex-row gap-3 sm:mt-3 items-center w-full">
           <div className="flex items-center justify-between w-full space-x-6 lg:space-x-0">
-            <motion.span initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
+            <motion.span
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}>
               <Link className="text-2xl sm:text-4xl font-bold" to="">
                 SHOP.CO
               </Link>
@@ -144,8 +166,7 @@ export default function Navbar() {
                     animate={{ scale: 1, y: -18, x: 18 }}
                     transition={{ duration: 0.3 }}
                     key={Cart}
-                    className="absolute translate-x-5 -translate-y-4 w-1 h-1 rounded-full bg-black flex items-center justify-center text-white p-3"
-                  >
+                    className="absolute translate-x-5 -translate-y-4 w-1 h-1 rounded-full bg-black flex items-center justify-center text-white p-3">
                     {Cart}
                   </motion.div>
                 )}
@@ -156,8 +177,7 @@ export default function Navbar() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6"
-                  >
+                    className="w-6 h-6">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -167,16 +187,23 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              <div className={`${Cart ? "ml-3" : ""} cursor-pointer block lg:hidden`} onClick={toggleSideNav}>
+              <div
+                className={`${
+                  Cart ? "ml-3" : ""
+                } cursor-pointer block lg:hidden`}
+                onClick={toggleSideNav}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  className="w-6 h-6">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
                 </svg>
               </div>
             </div>
@@ -184,11 +211,12 @@ export default function Navbar() {
 
           {isLoggedIn ? (
             <div className="flex flex-row flex-nowrap items-center gap-3 mt-2 lg:mt-0 w-full justify-center">
-              <span className="text-sm font-medium text-black whitespace-nowrap">Welcome, {userEmail}!</span>
+              <span className="text-sm font-medium text-black whitespace-nowrap">
+                Welcome, {userEmail}!
+              </span>
               <button
                 onClick={handleLogout}
-                className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700 transition duration-200 whitespace-nowrap"
-              >
+                className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700 transition duration-200 whitespace-nowrap">
                 Logout
               </button>
             </div>
@@ -196,14 +224,12 @@ export default function Navbar() {
             <div className="flex gap-3">
               <Link
                 to="/Login"
-                className="hidden md:block px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-400 transition duration-200"
-              >
+                className="hidden md:block px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-400 transition duration-200">
                 Login
               </Link>
               <Link
                 to="/SignUp"
-                className="hidden md:block px-4 py-2 text-sm font-medium text-black bg-white rounded-md border border-black hover:bg-gray-200 transition duration-200"
-              >
+                className="hidden md:block px-4 py-2 text-sm font-medium text-black bg-white rounded-md border border-black hover:bg-gray-200 transition duration-200">
                 Sign Up
               </Link>
             </div>
@@ -211,5 +237,5 @@ export default function Navbar() {
         </motion.div>
       </motion.nav>
     </motion.div>
-  )
+  );
 }
