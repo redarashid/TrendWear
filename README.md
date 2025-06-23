@@ -15,40 +15,35 @@ It offers a **seamless and intuitive shopping experience** through a **clean, re
 
 ## ⚙️ Technologies Used
 
-- **HTML5** – Markup structure  
-- **CSS3** – Base styling  
-- **Tailwind CSS** – Utility-first CSS framework  
-- **JavaScript** – Dynamic functionality  
-- **React.js** – Component-based UI  
-- **Redux** – Global state management  
-- **Redux Toolkit** – Simplified Redux logic  
+- **HTML5** – Markup structure
+- **CSS3** – Base styling
+- **Tailwind CSS** – Utility-first CSS framework
+- **JavaScript** – Dynamic functionality
+- **React.js** – Component-based UI
+- **Redux** – Global state management
+- **Redux Toolkit** – Simplified Redux logic
 - **Stripe** – Secure payment integration
 
 ---
 
 ## 🚀 Features
 
-- Explore clothing categories for **men, women, and kids**  
-- View detailed product pages with **images, prices, and descriptions**  
-- Seamlessly **add items to cart**, adjust quantities, and **checkout**  
-- **Secure payment integration** using Stripe  
-- Powerful **search and filtering** functionality  
-- **Responsive design** compatible with all devices  
-- Sleek and **modern UI** with Tailwind CSS  
+- Explore clothing categories for **men, women, and kids**
+- View detailed product pages with **images, prices, and descriptions**
+- Seamlessly **add items to cart**, adjust quantities, and **checkout**
+- **Secure payment integration** using Stripe
+- Powerful **search and filtering** functionality
+- **Responsive design** compatible with all devices
+- Sleek and **modern UI** with Tailwind CSS
 - Robust **state management** via Redux Toolkit
-
----
-
-## 📸 Screenshots
-
-> *(Add screenshots here to showcase your app)*
 
 ---
 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/shop-clothes.git
+git clone https://github.com/redarashid/shop-clothes.git
 cd shop-clothes
 npm install
 npm start
+```
