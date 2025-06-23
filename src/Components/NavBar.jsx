@@ -1,4 +1,3 @@
-
 import { useContext, useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";

@@ -1,15 +1,11 @@
-import React from "react";
-
-const TopHeader = () => {
+export default function topHeader() {
   return (
-    <header className=" bg-black font-thin text-white text-center p-2">
-        <span>Use promo code </span>
-        <span>
-          <a className=" font-bold" href="https://www.linkedin.com/in/rashid-reda-4048a5314/" target="_blank"> Rashid </a>
-        </span>
-        <span>for 20% discount</span>
+    <header className=" bg-black p-2 font-thin text-white text-center">
+      <span className="">Use promo code </span>
+      <span className="mr-1 font-bold">
+        <a href="https://www.linkedin.com/in/moemenadam/" target="_blank">Moemen</a>
+      </span>
+      <span>for 20% discount</span>
     </header>
-  );
-};
-
-export default TopHeader;
+  )
+}

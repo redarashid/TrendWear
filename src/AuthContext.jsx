@@ -1,27 +1,38 @@
-"use client"
+import { createContext, useState, useEffect } from 'react';
 
-import { createContext, useState } from "react"
+export const AuthContext = createContext();
 
-export const AuthContext = createContext({
-  isLoggedIn: false,
-  userEmail: "",
-  login: () => {},
-  logout: () => {},
-})
+export const AuthProvider = ({ children }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userEmail, setUserEmail] = useState(null);
 
-export function AuthProvider({ children }) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [userEmail, setUserEmail] = useState("")
+  // التحقق من localStorage عند تحميل التطبيق
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const email = localStorage.getItem('userEmail');
+    if (token && email) {
+      setIsLoggedIn(true);
+      setUserEmail(email);
+    }
+  }, []);
 
-  const login = (email) => {
-    setIsLoggedIn(true)
-    setUserEmail(email)
-  }
+  const login = (token, email) => {
+    localStorage.setItem('token', token);
+    localStorage.setItem('userEmail', email);
+    setIsLoggedIn(true);
+    setUserEmail(email);
+  };
 
   const logout = () => {
-    setIsLoggedIn(false)
-    setUserEmail("")
-  }
+    localStorage.removeItem('token');
+    localStorage.removeItem('userEmail');
+    setIsLoggedIn(false);
+    setUserEmail(null);
+  };
 
-  return <AuthContext.Provider value={{ isLoggedIn, userEmail, login, logout }}>{children}</AuthContext.Provider>
-}
+  return (
+    <AuthContext.Provider value={{ isLoggedIn, userEmail, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};

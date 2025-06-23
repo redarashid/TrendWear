@@ -1,12 +1,32 @@
-# React + Vite
+# 👕 Shop Clothes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Shop Clothes** is a modern and stylish online clothing store where users can browse, filter, and purchase a wide range of fashion items including t-shirts, jeans, dresses, jackets, and more. The store provides a seamless shopping experience with a clean and responsive UI.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛍️ View the live site:  
+👉 [**Shop Clothes Live**](https://shop-co-front.vercel.app/)
 
-## Expanding the ESLint configuration
+## 🧰 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **HTML5**
+- **CSS3**
+- **Tailwind CSS**
+- **JavaScript**
+- **React.js**
+- **Redux**
+- **Redux Toolkit**
+
+## 🛒 Features
+
+- Browse a variety of clothing categories for men, women, and kids.
+- Product details with images, prices, and descriptions.
+- Add to cart, adjust quantities, and checkout functionality.
+- Secure and smooth payment integration (Stripe).
+- Search and filtering options.
+- Responsive design that works across all devices.
+- Clean and modern UI with Tailwind CSS.
+- State management using Redux Toolkit.
+
+
+
