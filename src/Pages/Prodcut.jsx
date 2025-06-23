@@ -2,13 +2,13 @@ import { useContext, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Products } from '../store/Constants'
 import Page404 from './Page404'
-import RateCost from '../components/RateCost'
+import RateCost from '../Components/RateCost'
 import { motion } from "framer-motion"
 import AddToCart from '../store/AddToCart'
 import { CartCtx } from '../store/CartContext'
-import HomeSliders from '../components/HomeSliders'
+import HomeSliders from '../Components/HomeSliders'
 import { IoIosArrowForward } from "react-icons/io";
-import Img from '../components/Img'
+import Img from '../Components/Img'
 
 export default function Prodcut() {
   const [MyProdcut, setMyProdcut] = useState({})

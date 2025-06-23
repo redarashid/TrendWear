@@ -1,10 +1,10 @@
 import SideNavContext from '../store/SideNavContext'
 import CartContext from '../store/CartContext'
 
-import Navbar from '../components/Navbar'
-import TopHeader from '../components/TopHeader'
-import SideNav from '../components/SideNav'
-import LayoutHolder from '../components/LayoutHolder'
+import Navbar from '../Components/Navbar'
+import TopHeader from '../Components/TopHeader'
+import SideNav from '../Components/SideNav'
+import LayoutHolder from '../Components/LayoutHolder'
 
 
 export default function Error() {

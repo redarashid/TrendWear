@@ -3,10 +3,10 @@ import { useEffect, useRef, memo } from 'react'
 import { Link } from 'react-router-dom'
 import Reavel from '../Reavel'
 import { motion } from 'framer-motion'
-import BrandsBar from '../components/BrandsBar'
-import HomeSliders from '../components/HomeSliders'
-import HappyCustomers from '../components/HappyCustomers'
-import Img from '../components/Img'
+import BrandsBar from '../Components/BrandsBar'
+import HomeSliders from '../Components/HomeSliders'
+import HappyCustomers from '../Components/HappyCustomers'
+import Img from '../Components/Img'
 
 export default function Home({ to = '' }) {
   const NewArrival = useRef()

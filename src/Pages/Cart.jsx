@@ -1,5 +1,5 @@
 import { useContext, useState, useRef, useEffect } from "react"
-import CartLayout from "../components/CartLayout"
+import CartLayout from "../Components/CartLayout"
 import { Link } from "react-router-dom"
 import { CartCtx } from "../store/CartContext"
 import Reavel from "../Reavel"
@@ -7,7 +7,7 @@ import { MdOutlineDiscount } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import AddToCart from "../store/AddToCart"
 import { IoIosArrowForward } from "react-icons/io";
-import Img from "../components/Img"
+import Img from "../Components/Img"
 
 
 export default function Cart() {

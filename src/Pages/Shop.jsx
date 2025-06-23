@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import { Products } from '../store/Constants'
-import ShowProductsByType from '../components/ShowProductsByType'
+import ShowProductsByType from '../Components/ShowProductsByType'
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
