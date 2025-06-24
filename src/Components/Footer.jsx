@@ -4,18 +4,15 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import PaymentsLogos from "./PaymentsLogos";
-import { useState } from "react"; 
+import { useState } from "react";
 
 export default function Footer() {
   const [isSubscribed, setIsSubscribed] = useState(false); // إضافة حالة لتتبع الاشتراك
 
-  
   const handleSubmit = (e) => {
-    e.preventDefault(); 
-    setIsSubscribed(true); 
-    
-    
-    
+    e.preventDefault();
+    setIsSubscribed(true);
+
     setTimeout(() => {
       setIsSubscribed(false);
     }, 3000);
@@ -27,26 +24,24 @@ export default function Footer() {
         <div className="bolded text-3xl xsm:text-4xl text-white mb-10 max-w-[600px] sm:mb-0 sm:max-w-full">
           STAY UP TO DATE ABOUT OUR <br /> LATEST OFFERS
         </div>
-        <form 
-          onSubmit={handleSubmit} 
-          className="flex flex-col gap-3 w-full sm:w-auto items-center"
-        >
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-3 w-full sm:w-auto items-center">
           <div className="rounded-3xl bg-white p-2 flex w-full sm:w-auto">
             <MdOutlineEmail size={20} />
-            <input 
-              className="text-black outline-none ml-2 w-full sm:w-[500px] sm:text-sm" 
+            <input
+              className="text-black outline-none ml-2 w-full sm:w-[500px] sm:text-sm"
               placeholder="Enter your email address"
-              type="email" 
-              required 
+              type="email"
+              required
             />
           </div>
-          <button 
-            type="submit" 
-            className="rounded-3xl bg-white p-2 text-black text-center w-full sm:w-[300px] sm:text-sm"
-          >
+          <button
+            type="submit"
+            className="rounded-3xl bg-white p-2 text-black text-center w-full sm:w-[300px] sm:text-sm">
             Subscribe to Newsletter
           </button>
-        
+
           {isSubscribed && (
             <p className="text-white text-sm mt-2">Thanks for subscribe</p>
           )}
@@ -55,21 +50,32 @@ export default function Footer() {
 
       <footer>
         <div className="flex flex-wrap justify-between mt-10 gap-10">
-          <div id="1" className="flex-grow w-full lg:w-auto flex flex-col gap-10 ml-5 lg:ml-10">
+          <div
+            id="1"
+            className="flex-grow w-full lg:w-auto flex flex-col gap-10 ml-5 lg:ml-10">
             <h1 className="bolded text-3xl">SHOP.CO</h1>
             <p className="max-w-72 sm:max-w-full sm:text-left">
-              We have clothes that suits your style and<br></br> which you’re proud to wear. From women to men.
+              We have clothes that suits your style and<br></br> which you’re
+              proud to wear. From women to men.
             </p>
             <div className="flex gap-5">
               <FaXTwitter size={25} />
-              <FaFacebook size={25} />
-              <FaInstagram size={25} />
-              <FaGithub size={25} />
+              <a href="https://www.facebook.com/rashid.reda.96?locale=ar_AR">
+                <FaFacebook size={25} />
+              </a>
+              <a href="https://www.instagram.com/rashidreda___9/">
+                <FaInstagram size={25} />
+              </a>
+              <a href="https://github.com/redarashid">
+                <FaGithub size={25} />
+              </a>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-5 w-full sm:grid-cols-2 lg:flex lg:flex-grow lg:w-auto">
-            <div id="2" className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
+            <div
+              id="2"
+              className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
               <h1 className="font-semibold text-base sm:text-lg">Company</h1>
               <ul className="flex flex-col gap-1 sm:gap-2">
                 <li className="Links">About</li>
@@ -79,7 +85,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div id="3" className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
+            <div
+              id="3"
+              className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
               <h1 className="font-semibold text-base sm:text-lg">Help</h1>
               <ul className="flex flex-col gap-1 sm:gap-2">
                 <li className="Links">Customer Support</li>
@@ -89,7 +97,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div id="4" className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
+            <div
+              id="4"
+              className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
               <h1 className="font-semibold text-base sm:text-lg">FAQ</h1>
               <ul className="flex flex-col gap-1 sm:gap-2">
                 <li className="Links">Account</li>
@@ -99,7 +109,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div id="5" className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
+            <div
+              id="5"
+              className="w-full flex flex-col gap-2 items-center lg:items-start text-xs sm:text-sm">
               <h1 className="font-semibold text-base sm:text-lg">Resources</h1>
               <ul className="flex flex-col gap-1 sm:gap-2">
                 <li className="Links">Free eBooks</li>
@@ -113,7 +125,11 @@ export default function Footer() {
 
         <div className="flex justify-center mt-10 gap-y-5 border-t-4 items-center flex-wrap">
           <div className="flex-grow text-center md:text-left">
-            <a className="text-blue-800 ml-5" href="https://www.linkedin.com/in/rashid-reda-4048a5314/">Developed by Eng. Rashid Reda – 2025</a>
+            <a
+              className="text-blue-800 ml-5"
+              href="https://www.linkedin.com/in/rashid-reda-4048a5314/">
+              Developed by Eng. Rashid Reda – 2025
+            </a>
           </div>
           <div className="w-fit">
             <PaymentsLogos />
