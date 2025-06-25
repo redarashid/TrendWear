@@ -6,6 +6,7 @@ import TopHeader from "../Components/TopHeader";
 import SideNav from "../Components/SideNav";
 import LayoutHolder from "../Components/LayoutHolder";
 
+
 export default function Error() {
   window.scrollTo(0, 0);
   return (
