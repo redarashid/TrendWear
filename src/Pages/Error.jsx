@@ -1,7 +1,7 @@
 import SideNavContext from "../store/SideNavContext";
 import CartContext from "../store/CartContext";
 
-import Navbar from "../Components/navbar";
+import Navbar from "../Components/Navbar";
 import TopHeader from "../Components/TopHeader";
 import SideNav from "../Components/SideNav";
 import LayoutHolder from "../Components/LayoutHolder";
