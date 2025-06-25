@@ -1,25 +1,22 @@
-import SideNavContext from '../store/SideNavContext'
-import CartContext from '../store/CartContext'
+import SideNavContext from "../store/SideNavContext";
+import CartContext from "../store/CartContext";
 
-import Navbar from '../Components/Navbar.jsx'
-import TopHeader from '../Components/TopHeader'
-import SideNav from '../Components/SideNav'
-import LayoutHolder from '../Components/LayoutHolder'
-
+import Navbar from "../Components/navbar";
+import TopHeader from "../Components/TopHeader";
+import SideNav from "../Components/SideNav";
+import LayoutHolder from "../Components/LayoutHolder";
 
 export default function Error() {
-  window.scrollTo(0,0)
+  window.scrollTo(0, 0);
   return (
     <SideNavContext>
       <CartContext>
+        <TopHeader />
+        <Navbar />
+        <LayoutHolder type="404" />
 
-        <TopHeader/>
-        <Navbar/>
-        <LayoutHolder type='404'/>
-
-        <SideNav/>
-
+        <SideNav />
       </CartContext>
-  </SideNavContext>
-  )
+    </SideNavContext>
+  );
 }
