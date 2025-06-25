@@ -7,7 +7,7 @@ import { MdOutlineDiscount } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import AddToCart from "../store/AddToCart"
 import { IoIosArrowForward } from "react-icons/io";
-import Img from "../Components/Img"
+import Img from "../Components/Img.jsx"
 
 
 export default function Cart() {
