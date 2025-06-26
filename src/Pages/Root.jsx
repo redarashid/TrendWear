@@ -1,24 +1,23 @@
-import SideNavContext from '../store/SideNavContext'
-import CartContext from '../store/CartContext'
-import Navbar from '../Components/NavBar'
-import TopHeader from '../Components/TopHeader'
-import SideNav from '../Components/SideNav'
-import LayoutHolder from '../Components/LayoutHolder'
-
+import SideNavContext from "../store/SideNavContext";
+import CartContext from "../store/CartContext";
+import TopHeader from "../Components/TopHeader";
+import SideNav from "../Components/SideNav";
+import LayoutHolder from "../Components/LayoutHolder";
+import Navbar from "../Components/NavBar";
 
 export default function Root() {
   return (
-    <div className='bg-whgite'>
+    <div className="bg-whgite">
       <SideNavContext>
         <CartContext>
-          <TopHeader/>
-          <Navbar/>
+          <TopHeader />
+          <Navbar />
 
-          <LayoutHolder type='Outlet'/>
+          <LayoutHolder type="Outlet" />
 
-          <SideNav/>
+          <SideNav />
         </CartContext>
       </SideNavContext>
     </div>
-  )
+  );
 }
